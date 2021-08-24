@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <title> BLKT - DateCalc </title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <header> 
+            <nav>
+
+                <div class="brand">
+
+                    <!-- brand -->
+                    
+                </div>
+
+                <div class="title">
+
+                    <h1> DateCalc </h1>
+
+                </div>
+
+            </nav>
+
+
+        </header>
+
+        <div class="main">
+
+            <a class="diff" onclick="displayDiff()">Difference Between Dates</a>
+            <a class="add" onclick="displayAdd()">Add to/Subtract From</a>
+
+            <section class="forms">
+
+
+                <form class="differenceBetween slide display">
+
+                    <div class="input">
+
+                        <div class="startDate">
+
+                            <label for="diffStart">Start Date </label>
+                            <input id="diffStart" name="startDate" type="date">
+
+                        </div>
+
+                        <div class="endDate">
+
+                            <label for="diffEnd">End Date </label>
+                            <input id="diffEnd" name="endDate" type="date">
+
+                        </div>
+
+                    </div>
+
+                    <div class="checkboxes">
+
+                        <ul>
+
+                            <li>
+                                <label for="diffWeekDay">Include Week Days?</label>
+                                <input id="diffWeekday" name="weekdaysOnly" type="checkbox">
+                            </li>
+
+                            <li>
+                                <label for="diffWeekend">Include Weekends?</label>
+                                <input id="diffWeekend" name="weekendsOnly" type="checkbox">  
+                            </li>
+
+                            <li>
+                                <label for="diffEndDay">Include end day (add 1 day?)</label>
+                                <input id="diffEndDay" name="addEndDay" type="checkbox">  
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class="submit">
+                        <input id="diffSubmit" type="submit">
+                    </div>
+
+                    <div class="result">
+                        <p id="diffStartDate">
+                            StartDate
+                        </p>
+
+                        <p id="diffEndDate">
+                            EndDate
+                        </p>
+
+                        <p id="diffOptions">
+                            CheckedOptions
+                        </p>
+
+                        <div class="finalResult">
+
+                            <p id="diffResultDays">
+                                00D
+                            </p>
+
+                            <p id="diffResultWeeks">
+                                00W
+                            </p>
+
+                            <p id="diffResultMonths">
+                                00M
+                            </p>
+
+                            <p id="diffResultYears">
+                                0000Y
+                            </p>
+
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <form class="addSubtract slide">
+
+                    <div class="input">
+
+                        <div class="startDate">
+                            <label for="addStartDate">Start Date</label>
+                            <input id="addStart" name="startDate" type="date">
+
+                        </div>
+
+                        <input type="button" id="toggleAdd" value="+">
+
+                        <div class="addDate">
+
+                            <label for="addAmount">Add</label>
+                            <input id="addAmount" name="addAmount" type="number">
+
+                            <select id="addType">
+
+                                <option value="Days">Day(s)</option>
+                                <option value="Weeks">Week(s)</option>
+                                <option value="Months">Month(s)</option>
+                                <option value="Years">Year(s)</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="checkboxes">
+
+                        <ul>
+
+                            <li>
+                                <label for="addEndDay">Include end day (add 1 day?)</label>
+                                <input name="addEndDay" type="checkbox">  
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class="submit">
+                        <input id="addSubmit" type="submit">
+                    </div>
+
+                    <div class="result">
+
+
+                        <p id="addStartDate">
+                            StartDate
+                        </p>
+
+                        <p id="addEndDate">
+                            EndDate
+                        </p>
+
+                        <p id="addOptions">
+                            CheckedOptions
+                        </p>
+
+                        <div id="finalResult">
+
+                            <p id="addResultDays">
+                                00D
+                            </p>
+
+                            <p id="addResultWeeks">
+                                00W
+                            </p>
+
+                            <p id="addResultMonths">
+                                00M
+                            </p>
+
+                            <p id="addResultYears">
+                                0000Y
+                            </p>
+
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+            </section>
+                    
+        </div>
+
+        <footer>
+            <p> © BLKT 2021 </p>
+        </footer>
+
+        <script src="app.js"></script>
+
+    </body>
+
+
+</html>

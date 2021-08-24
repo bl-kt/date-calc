@@ -1,0 +1,11 @@
+.display{
+    display: block !important;
+}
+
+.differenceBetween{
+    display: none; 
+}
+
+.addSubtract{
+    display: none;
+}
