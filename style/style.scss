@@ -63,14 +63,17 @@
 
     }
 
-    header{
+    header, article, section{
         position: relative;
         align-items: center;
-        display: grid;
 
         max-width: 740px;
         margin: 0 auto;
         grid-template-columns: 1fr;
+    }
+
+    article, section {
+        height: calc(100vh - 260px);
     }
 
     svg{
@@ -78,13 +81,10 @@
         stroke: $text;
         fill: $text;
     }
+
 }
 
 //display
-
-.display{
-    display: block !important;
-}
 
 .differenceBetween{
     display: none; 
@@ -100,7 +100,105 @@ body{
     @include main()
 }
 
+.display {
 
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    background-color: #19191a;
+
+    div{
+        margin: auto;
+        padding: 0px 50px;
+
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+    }  
+    
+    .content{
+        margin: auto;
+    }
+
+    .input{
+        margin: auto;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        text-align: center;
+    
+        #diffStart, #diffEnd, #addStart, #addAmount{
+            color: orange;
+        }
+
+        select{
+            display: in-line;
+            float: left;
+        }
+
+        .addDate{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    
+    }
+
+    .checkboxes{
+        float: left;
+    
+        ul li {
+            text-align: left;
+            margin: 0px 30px 40px 50px;
+            display: block;
+            margin: .25em;
+            padding-left: 1em;
+            position: relative;
+            line-height: 1.5em;
+        }
+    }
+
+    .submit{
+        float: right;
+        padding: 50px !important;
+    }
+
+    .result{
+        grid-column: 1/2;
+
+        .finalResult{
+            grid-column: 2/3;
+            float: left;
+        }
+    }
+}
+
+.form-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 4px;
+    text-align: center;
+
+    .diff, .add{
+        padding: .25em;
+    }
+
+    .diff{
+        background-color: #19191a;
+    }
+
+    .add{
+        background-color: transparent;
+    }
+}
+
+
+.content{
+    margin: auto;
+    padding-top: 10vh;
+}
 //specifics
 
 .brand svg{

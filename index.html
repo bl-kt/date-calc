@@ -3,7 +3,13 @@
     <head>
 
         <title> BLKT - DateCalc </title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen|Megrim|Roboto">
+
+        <meta charset="utf-8"/> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome = 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/jpg" href="./content/images/blktLogo.svg">
 
     </head>
 
@@ -16,7 +22,7 @@
                 <div class="brand">
                     <object>
 
-                        <a href="index.html" title="BLKT">
+                        <a href="https://blkt.co.uk" title="BLKT">
                             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.43 373.02">
 
                                 
@@ -109,186 +115,161 @@
 
         <div class="main">
 
-            <a class="diff form-nav" onclick="displayDiff()">Difference Between Dates</a>
-            <a class="add form-nav" onclick="displayAdd()">Add to/Subtract From</a>
+            <section>
 
-            <section class="forms">
+                <div class="content">
+
+                    <div class="form-nav">
+                        <a class="diff" onclick="displayDiff()">Difference Between Dates</a>
+                        <a class="add" onclick="displayAdd()"> Add to/Subtract From</a>
+                    </div>
+
+                    <form class="differenceBetween slide display">
+
+                        <div class="input">
+
+                            <div class="startDate">
+
+                                <label for="diffStart">Starting Date </label>
+                                <input id="diffStart" name="startDate" type="date">
 
 
-                <form class="differenceBetween slide display">
+                            </div>
 
-                    <div class="input">
+                            
+                            <div class="endDate">
 
-                        <div class="startDate">
+                                <label for="diffEnd">Ending  Date </label>
+                                <input id="diffEnd" name="endDate" type="date">
 
-                            <label for="diffStart">Start Date </label>
-                            <input id="diffStart" name="startDate" type="date">
+                            </div>
 
                         </div>
 
-                        <div class="endDate">
+                        <div class="checkboxes">
 
-                            <label for="diffEnd">End Date </label>
-                            <input id="diffEnd" name="endDate" type="date">
+                            <ul>
+
+                                <li>
+                                    <input id="diffWeekday" name="weekdaysOnly" type="checkbox">
+                                    <label for="diffWeekDay">Include Week Days?</label>
+                                </li>
+
+                                <li>                               
+                                    <input id="diffWeekend" name="weekendsOnly" type="checkbox">  
+                                    <label for="diffWeekend">Include Weekends?</label>
+                                </li>
+
+                                <li>
+                                    <input id="diffEndDay" name="addEndDay" type="checkbox"> 
+                                    <label for="diffEndDay">Include end day (add 1 day?)</label> 
+                                </li>
+
+                            </ul>
+
 
                         </div>
 
-                    </div>
+                        <div class="submit">
+                            <input id="diffSubmit" type="submit">
+                        </div>
 
-                    <div class="checkboxes">
+                        <div class="result">
+                            <p id="dates">
+                                StartDate > EndDate
+                            </p>
 
-                        <ul>
+                            <p id="diffOptions">
+                                CheckedOptions
+                            </p>
 
-                            <li>
-                                <label for="diffWeekDay">Include Week Days?</label>
-                                <input id="diffWeekday" name="weekdaysOnly" type="checkbox">
-                            </li>
-
-                            <li>
-                                <label for="diffWeekend">Include Weekends?</label>
-                                <input id="diffWeekend" name="weekendsOnly" type="checkbox">  
-                            </li>
-
-                            <li>
-                                <label for="diffEndDay">Include end day (add 1 day?)</label>
-                                <input id="diffEndDay" name="addEndDay" type="checkbox">  
-                            </li>
-
-                        </ul>
-
-
-                    </div>
-
-                    <div class="submit">
-                        <input id="diffSubmit" type="submit">
-                    </div>
-
-                    <div class="result">
-                        <p id="diffStartDate">
-                            StartDate
-                        </p>
-
-                        <p id="diffEndDate">
-                            EndDate
-                        </p>
-
-                        <p id="diffOptions">
-                            CheckedOptions
-                        </p>
+                        </div>
 
                         <div class="finalResult">
 
-                            <p id="diffResultDays">
-                                00D
-                            </p>
+                            <p id="diffResult">00 days / 00 weeks / 00 months / 00 years</p>
 
-                            <p id="diffResultWeeks">
-                                00W
-                            </p>
+                        </div>
+                    
+                    </form>
 
-                            <p id="diffResultMonths">
-                                00M
-                            </p>
+                    <form class="addSubtract slide">
 
-                            <p id="diffResultYears">
-                                0000Y
-                            </p>
+                        <div class="input">
+
+                            <div class="startDate">
+                                <label for="addStartDate">Start Date</label>
+                                <input id="addStart" name="startDate" type="date">
+
+                            </div>
+
+                            <div class="addDate">
+
+                                <select id="addSubtract">00
+                                    <option value="add">Add</option>
+                                    <option value="subtract">Subtract</option>
+                                </select>
+
+                                <input id="addAmount" name="addAmount" type="number">
+
+                                <select id="addType">
+
+                                    <option value="Days">Day(s)</option>
+                                    <option value="Weeks">Week(s)</option>
+                                    <option value="Months">Month(s)</option>
+                                    <option value="Years">Year(s)</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="checkboxes">
+
+                            <ul>
+
+                                <li>
+                                    <label for="addEndDay">Include end day (add 1 day?)</label>
+                                    <input name="addEndDay" type="checkbox">  
+                                </li>
+
+                            </ul>
 
 
                         </div>
 
-                    </div>
-
-                </form>
-
-                <form class="addSubtract slide">
-
-                    <div class="input">
-
-                        <div class="startDate">
-                            <label for="addStartDate">Start Date</label>
-                            <input id="addStart" name="startDate" type="date">
-
+                        <div class="submit">
+                            <input id="addSubmit" type="submit">
                         </div>
 
-                        <input type="button" id="toggleAdd" value="+">
+                        <div class="result">
 
-                        <div class="addDate">
 
-                            <label for="addAmount">Add</label>
-                            <input id="addAmount" name="addAmount" type="number">
+                            <p id="dates">
+                                StartDate > EndDate
+                            </p>
 
-                            <select id="addType">
-
-                                <option value="Days">Day(s)</option>
-                                <option value="Weeks">Week(s)</option>
-                                <option value="Months">Month(s)</option>
-                                <option value="Years">Year(s)</option>
-
-                            </select>
+                            <p id="addOptions">
+                                CheckedOptions
+                            </p>
 
                         </div>
-
-                    </div>
-
-                    <div class="checkboxes">
-
-                        <ul>
-
-                            <li>
-                                <label for="addEndDay">Include end day (add 1 day?)</label>
-                                <input name="addEndDay" type="checkbox">  
-                            </li>
-
-                        </ul>
-
-
-                    </div>
-
-                    <div class="submit">
-                        <input id="addSubmit" type="submit">
-                    </div>
-
-                    <div class="result">
-
-
-                        <p id="addStartDate">
-                            StartDate
-                        </p>
-
-                        <p id="addEndDate">
-                            EndDate
-                        </p>
-
-                        <p id="addOptions">
-                            CheckedOptions
-                        </p>
 
                         <div id="finalResult">
 
-                            <p id="addResultDays">
-                                00D
-                            </p>
+                            <div class="finalResult">
 
-                            <p id="addResultWeeks">
-                                00W
-                            </p>
-
-                            <p id="addResultMonths">
-                                00M
-                            </p>
-
-                            <p id="addResultYears">
-                                0000Y
-                            </p>
+                                <p id="diffResult">00 days / 00 weeks / 00 months / 00 years</p>
+    
+                            </div>
 
 
                         </div>
 
-                    </div>
+                    </form>
 
-                </form>
-
+                </div>
 
             </section>
                     
@@ -298,7 +279,7 @@
             <p> © BLKT 2021 </p>
         </footer>
 
-        <script src="app.js"></script>
+        <script src="./js/app.js"></script>
 
     </body>
 
