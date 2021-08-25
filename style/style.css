@@ -191,7 +191,7 @@ body .brand svg {
   stroke: #fff;
   margin: 0 auto;
   fill: #ffffff00 !important;
-  stroke-width: 5px;
+  stroke-width: 5;
 }
 
 body .brand svg:hover {
@@ -426,6 +426,10 @@ body .link:hover, body .link:visited {
   color: #fd5e53 !important;
 }
 
+.light .date-calc .display .submit {
+  color: #ea4c89 !important;
+}
+
 .differenceBetween {
   display: none;
 }
@@ -447,6 +451,7 @@ body .link:hover, body .link:visited {
   right: 0;
   bottom: 0;
   margin: 0;
+  font-size: 1.7vh;
 }
 
 .date-calc .divider {
@@ -658,11 +663,17 @@ body .link:hover, body .link:visited {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  font-family: Roboto, sans-serif;
   text-align: center;
 }
 
 .date-calc .display .input #diffStart, .date-calc .display .input #diffEnd, .date-calc .display .input #addStart, .date-calc .display .input #addAmount {
   color: orange;
+  width: 14em;
+}
+
+.date-calc .display .input #addAmount {
+  width: 3em;
 }
 
 .date-calc .display .input select {
@@ -675,6 +686,18 @@ body .link:hover, body .link:visited {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  padding-top: 20px;
+}
+
+.date-calc .display .input .addDate #addAmount {
+  height: 2.20em;
+  width: 4em;
+  border: none;
+}
+
+.date-calc .display .input .addDate #addSubtract, .date-calc .display .input .addDate #addType {
+  height: 2.5em;
+  border: none;
 }
 
 .date-calc .display .checkboxes {
@@ -691,22 +714,27 @@ body .link:hover, body .link:visited {
   line-height: 1.5em;
 }
 
-.date-calc .display .submit {
-  float: right;
-  padding: 50px !important;
+.date-calc .display .submit #addSubmit, .date-calc .display .submit #diffSubmit {
+  color: white;
+  background-color: orange;
+  padding: 15px 24px 17px;
+  font-size: 1.8vh;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 12px;
+  display: inline-block;
+  margin-bottom: 24px;
 }
 
 .date-calc .display .result {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
 }
 
-.date-calc .display .result .finalResult {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  float: left;
+.date-calc .display .result p {
+  display: none;
 }
 
 .form-nav {

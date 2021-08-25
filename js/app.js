@@ -25,10 +25,10 @@ function displayAdd(){
 
 //dark mode
 
-const body = document.querySelector('body');
+const body = document.querySelector("body");
 const mode = document.querySelector("#mode");
-const moon = document.querySelector('#moon');
-const sun = document.querySelector('#sun');
+const moon = document.querySelector("#moon");
+const sun = document.querySelector("#sun");
 
 function lightMode(){
     body.classList.toggle('light');
