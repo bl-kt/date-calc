@@ -1,6 +1,6 @@
 //themes
 
-@mixin main($highlight: orange,  $text: #fff, $background:#252526, $grad:#19191a,){
+@mixin main($highlight: orange,  $text: #fff, $background:#252526, $grad:#19191a, $divider:#4d4d50){
     background-color: $background;
     color: $text;
 
@@ -16,15 +16,68 @@
     bottom: 0;
     margin: 0;
 
+    .divider {
+        background-image: linear-gradient(-285deg, $divider 20%, $background 80%, $divider 100%);
+        transform: skewY(-6deg);
+        height: 1px;
+        width: 100%;
+        margin: 60px 0;
+    }
+
     h1, h2, h3{
         font-family: Oxygen, sans-serif;
-        color: $highlight;
+        color: $highlight !important;
     }
+
+    .title{
+        line-height: 54px;
+        font-family: Oxygen, sans-serif;
+        font-size: 5vh;
+        font-weight: 3000;
+        letter-spacing: -.34px;
+    }
+
+    .colorTitle{
+        color: $highlight;
+    } 
 
     p, form, a{
         font-family: Roboto, sans-serif;
         color: $text;
         text-decoration: none;
+        font-size: 1.8vh;
+    }
+
+    .link{
+        font-family: Oxygen, sans-serif;
+        color: $highlight;
+    }
+
+    .nav-wrapper{
+        background: linear-gradient(to bottom, $grad 10%, $background);
+
+        nav{
+            padding-top: 32px;
+            max-width: 940px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+    
+            #social{
+                justify-self: right;
+                padding: 15px 20px;  
+    
+                li{
+                    float: left;
+                    margin-left: 0.5vw; 
+    
+                    a{
+                        padding: 8px 12px;
+                    }
+                }
+            }
+    
+        }
     }
 
     ul {
@@ -34,33 +87,6 @@
     ul li {
         margin-bottom: 15px;
         list-style: none;
-    }
-
-    .nav-wrapper{
-        background: linear-gradient(to bottom, $grad 10%, $background);
-    }
-
-    nav{
-        padding-top: 32px;
-        max-width: 940px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 80px 1fr;
-
-        #social{
-            justify-self: right;
-            padding: 15px 20px;  
-
-            li{
-                float: left;
-                margin-left: 0.5vw; 
-
-                a{
-                    padding: 8px 12px;
-                }
-            }
-        }
-
     }
 
     header, article, section{
@@ -76,15 +102,151 @@
         height: calc(100vh - 260px);
     }
 
+    .content{
+        max-width: 700px;
+        margin: 0px auto;
+        padding: 0px 40px 0px;
+        padding-top: 5vh;
+        grid-template-columns: 1fr;
+        width: auto;
+    }
+
+    .p{
+        font-family: Roboto, sans-serif;
+        font-size: 1.8vh;
+        line-height: 30px;
+        margin-bottom: 44px;
+    }
+
     svg{
         color: $text;
         stroke: $text;
         fill: $text;
     }
 
+    .footer-background{
+        background:linear-gradient(to bottom, $background, $grad);
+        height: calc(100vh);
+        bottom: 0;
+    }
+
+    .contact-wrapper{
+        width: 100%;
+        grid-template-columns: 450px 450px;
+        display: grid;
+        margin: 0 auto;
+    
+        height: calc(100vh - 260px);
+        position: relative;
+        align-items: center;
+        max-width: 900px;
+
+        display: grid;
+        font-size: 14px;
+
+        p{
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            font-size: 1.9vh;
+            text-align: left;
+            letter-spacing: .36px;
+            font-family: Roboto, sans-serif;
+        }
+
+        footer{
+            display: grid;
+            font-size: 14px;
+        }
+
+        .footer-grid{
+            text-align: left;
+            height: calc(100vh - 260px);
+            padding: 50px 40px 0px;
+        }
+
+        #map{
+            width: 300px;
+            height: 350px;
+            margin: 0 auto;
+            border-style: solid black;
+            border-radius: 5px;
+        }
+        
+
+    }
+
+    #mode #moon{
+        display: none;
+    }
 }
 
-//display
+//general
+
+body{
+    @include main();
+
+    .brand svg{
+        stroke: #fff;
+        margin: 0 auto;
+        fill: #ffffff00 !important;
+        stroke-width: 5px;
+    }
+
+    .brand svg:hover{
+        stroke: orange;
+    }
+
+    #linkedin:hover{
+        fill:  #2867B2;
+        stroke:#2867B2;
+    }
+    
+    #github:hover{
+        fill: #c9510c;
+        stroke: #c9510c;
+    }
+    
+    #dribbble:hover{
+        fill: #ea4c89;
+        stroke: #ea4c89;
+    }
+
+    .link:hover, .link:visited{
+        color: rgba(255, 166, 0, 0.712);
+    }
+    
+}
+
+.light{
+    @include main($highlight: #fd5e53, $text: #494949, $background: #e4e4e4, $grad:#c2c2c2, $divider: #c2c2c2);
+
+    .link:hover, .link:visited{
+        color: #fd5e53;
+    }
+
+    .brand svg:hover{
+        stroke: #fd5e53;
+    }
+
+    .brand svg{
+        stroke: #494949;
+    }
+
+    .date-calc{
+        background-color: #e4e4e4;
+        .display{
+   
+            #diffStart, #diffEnd, #addStart, #addAmount{
+                color: #fd5e53 !important;
+            }
+        }
+    
+    }
+    
+}
+
+//this page specifics
 
 .differenceBetween{
     display: none; 
@@ -94,85 +256,86 @@
     display: none;
 }
 
-//general
+.date-calc{
+    @include main();
 
-body{
-    @include main()
-}
-
-.display {
-
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    background-color: #19191a;
-
-    div{
-        margin: auto;
-        padding: 0px 50px;
-
-        justify-content: space-around;
-        align-items: center;
-        justify-items: center;
-    }  
-    
     .content{
-        margin: auto;
+        margin: auto !important;
+        padding-top: 10vh;
     }
 
-    .input{
-        margin: auto;
-        grid-column: 1/3;
-        display: grid;
+    .display {
+
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr);
-
-        text-align: center;
+        grid-template-rows: repeat(2, 1fr);
     
-        #diffStart, #diffEnd, #addStart, #addAmount{
-            color: orange;
-        }
-
-        select{
-            display: in-line;
-            float: left;
-        }
-
-        .addDate{
+        background-color: #0000002f;
+    
+        div{
+            margin: auto;
+            padding: 0px 50px;
+    
+            justify-content: space-around;
+            align-items: center;
+            justify-items: center;
+        }  
+    
+    
+        .input{
+            margin: auto;
+            grid-column: 1/3;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-
+            grid-template-columns: repeat(2, 1fr);
     
-    }
-
-    .checkboxes{
-        float: left;
+            text-align: center;
+        
+            #diffStart, #diffEnd, #addStart, #addAmount{
+                color: orange;
+            }
     
-        ul li {
-            text-align: left;
-            margin: 0px 30px 40px 50px;
-            display: block;
-            margin: .25em;
-            padding-left: 1em;
-            position: relative;
-            line-height: 1.5em;
+            select{
+                display: in-line;
+                float: left;
+            }
+    
+            .addDate{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+    
+        
         }
-    }
-
-    .submit{
-        float: right;
-        padding: 50px !important;
-    }
-
-    .result{
-        grid-column: 1/2;
-
-        .finalResult{
-            grid-column: 2/3;
+    
+        .checkboxes{
             float: left;
+        
+            ul li {
+                text-align: left;
+                margin: 0px 30px 40px 50px;
+                display: block;
+                margin: .25em;
+                padding-left: 1em;
+                position: relative;
+                line-height: 1.5em;
+            }
+        }
+    
+        .submit{
+            float: right;
+            padding: 50px !important;
+        }
+    
+        .result{
+            grid-column: 1/2;
+    
+            .finalResult{
+                grid-column: 2/3;
+                float: left;
+            }
         }
     }
+
 }
 
 .form-nav{
@@ -186,50 +349,10 @@ body{
     }
 
     .diff{
-        background-color: #19191a;
+        background-color: #0000002f;
     }
 
     .add{
         background-color: transparent;
     }
 }
-
-
-.content{
-    margin: auto;
-    padding-top: 10vh;
-}
-//specifics
-
-.brand svg{
-    stroke: #fff;
-    margin: 0 auto;
-    fill: #ffffff00 !important;
-    stroke-width: 5px;
-}
-
-.brand svg:hover{
-    stroke: orange;
-}
-
-#linkedin:hover{
-    fill:  #2867B2;
-    stroke:#2867B2;
-}
-
-#github:hover{
-    fill: #c9510c;
-    stroke: #c9510c;
-}
-
-#dribbble:hover{
-    fill: #ea4c89;
-    stroke: #ea4c89;
-}
-
-.title{
-    margin: 0 auto;
-    text-align: left;
-    font-size: 20px;
-}
-

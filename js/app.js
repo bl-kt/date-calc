@@ -8,7 +8,8 @@ const addToggle = document.querySelector(".add")
 
 function displayDiff(){
     diffSlide.classList.add("display");
-    diffToggle.style.backgroundColor = "#19191a";
+    diffToggle.style.backgroundColor = "#0000002f";
+    
     addSlide.classList.remove("display");
     addToggle.style.backgroundColor = "transparent";
 
@@ -17,8 +18,26 @@ function displayDiff(){
 function displayAdd(){
     diffSlide.classList.remove("display");
     diffToggle.style.backgroundColor = "transparent";
+
     addSlide.classList.add("display");
-    addToggle.style.backgroundColor = "#19191a";
+    addToggle.style.backgroundColor = "#0000002f";
 }
 
+//dark mode
 
+const body = document.querySelector('body');
+const mode = document.querySelector("#mode");
+const moon = document.querySelector('#moon');
+const sun = document.querySelector('#sun');
+
+function lightMode(){
+    body.classList.toggle('light');
+    if (body.classList.contains('light')){
+        moon.style.display = "inline-block";
+        sun.style.display = "none";
+    }
+    else {
+        sun.style.display = "inline-block";
+        moon.style.display = "none";
+    }
+}
