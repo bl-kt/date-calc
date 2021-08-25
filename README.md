@@ -1,6 +1,7 @@
 ## date-calc
 
 I found myself googling 'date calculator' more often than I'd like, and wanted to make one that looked a lot more visually appealing than many I found online.
+I'm also using this project to practice forms, grid-layout and SCSS.
 
 **Planned Features**
 - Calculate distance between dates in days, weeks, months, years
