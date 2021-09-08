@@ -222,7 +222,7 @@ body{
     @include main($highlight: #fd5e53, $text: #494949, $background: #e4e4e4, $grad:#c2c2c2, $divider: #c2c2c2);
 
     .link:hover, .link:visited{
-        color: #fd5e53;
+        color: #e05348;
     }
 
     .brand svg:hover{
@@ -230,7 +230,7 @@ body{
     }
 
     .brand svg{
-        stroke: #494949;
+        stroke: 
     }
 
     .date-calc{
