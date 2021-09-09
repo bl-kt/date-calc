@@ -35,7 +35,7 @@ function calcDiff(startTime, endTime){
     console.log(`The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`);
     console.log(`The rounded difference is ${Math.round(diffDays)} day(s), or ${Math.round(diffWeeks)} week(s), or ${Math.round(diffMonths)} month(s), or ${Math.round(diffYears)} year(s).`);
     
-    diffResult.innerHTML = (`The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`);
+    diffResult.innerHTML = `The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`;
     return diffDays;
 }
 
@@ -52,7 +52,7 @@ function subDays(startDate, amount) {
 }
 
 function differenceBetween(diffStart, diffEnd){
-    diffResult.innerHTML = calcDiff(diffStart, diffEnd);
+    calcDiff(diffStart, diffEnd);
 }
 
 //slideshow
