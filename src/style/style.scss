@@ -17,7 +17,7 @@ body {
     footer{
 
         position: absolute;
-        bottom: 5px;
+        bottom: 0px;
         margin: auto;
 
         p{
@@ -37,7 +37,7 @@ body {
     display: flex !important;
 }
 
-.addSubtract{
+.addSubtract, .differenceBetween{
     display: none;
 }
 
@@ -60,7 +60,7 @@ body {
     .form-nav{
         display: flex;
         position: relative;
-        top: -10.5vh;
+        top: -11vh;
         margin: 15px;
         
      
@@ -72,6 +72,16 @@ body {
             border-radius: 4px;
             padding: 8px;
             letter-spacing: .5px;
+        }
+
+        a:hover{
+            color:#00689c;
+            background: linear-gradient(to bottom, #ccc, #fff);
+        }
+
+        a:clicked{
+            color:#00689c;
+            background: linear-gradient(to bottom, #ccc, #fff);
         }
     }
 
@@ -86,6 +96,9 @@ body {
     }
 
     .content{
+
+        position: relative;
+        z-index: 2;
 
         form {
             flex-wrap: wrap;
