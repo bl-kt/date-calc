@@ -134,11 +134,11 @@ body footer a {
   padding: 20px 0;
 }
 
-.date-calc .content form .dateInput .startDate, .date-calc .content form .dateInput .endDate {
+.date-calc .content form .dateInput .startDate, .date-calc .content form .dateInput .endDate, .date-calc .content form .dateInput .addDate {
   padding: 5px;
 }
 
-.date-calc .content form .dateInput .startDate input, .date-calc .content form .dateInput .endDate input {
+.date-calc .content form .dateInput .startDate input, .date-calc .content form .dateInput .endDate input, .date-calc .content form .dateInput .addDate input {
   height: 30px;
   outline: none;
   border-radius: 4px;
@@ -148,25 +148,25 @@ body footer a {
   font-size: 16px;
 }
 
-.date-calc .content form .dateInput .startDate input:focus, .date-calc .content form .dateInput .endDate input:focus {
+.date-calc .content form .dateInput .startDate input:focus, .date-calc .content form .dateInput .endDate input:focus, .date-calc .content form .dateInput .addDate input:focus {
   border: 1px solid #007BB8;
   border-bottom-width: 3px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
 }
 
-.date-calc .content form .dateInput .startDate input:hover, .date-calc .content form .dateInput .endDate input:hover {
+.date-calc .content form .dateInput .startDate input:hover, .date-calc .content form .dateInput .endDate input:hover, .date-calc .content form .dateInput .addDate input:hover {
   border: 1px solid #007BB8;
   border-bottom-width: 2px;
 }
 
-.date-calc .content form .dateInput .startDate label, .date-calc .content form .dateInput .endDate label {
+.date-calc .content form .dateInput .startDate label, .date-calc .content form .dateInput .endDate label, .date-calc .content form .dateInput .addDate label {
   font-weight: 600;
   margin-bottom: 5px;
   display: block;
 }
 
-.date-calc .content form .dateInput .startDate #diffStart, .date-calc .content form .dateInput .startDate #diffEnd, .date-calc .content form .dateInput .endDate #diffStart, .date-calc .content form .dateInput .endDate #diffEnd {
+.date-calc .content form .dateInput .startDate #diffStart, .date-calc .content form .dateInput .startDate #diffEnd, .date-calc .content form .dateInput .endDate #diffStart, .date-calc .content form .dateInput .endDate #diffEnd, .date-calc .content form .dateInput .addDate #diffStart, .date-calc .content form .dateInput .addDate #diffEnd {
   width: calc(100% / 2 + 50);
   float: initial;
 }
