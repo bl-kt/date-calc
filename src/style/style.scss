@@ -113,10 +113,10 @@ body {
                 padding: 20px 0;
 
                 .startDate, .endDate, .addDate{
-
+                    max-width: 200px
                     padding: 5px;
 
-                    input{
+                    input, select{
                         height: 30px;
                         outline: none;
                         border-radius: 4px;
@@ -145,8 +145,15 @@ body {
 
                     #diffStart, #diffEnd{
 
-                        width: calc(100% / 2 + 50);
-                        float: initial;
+                        width: calc((100% / 2) + 50);
+                    }
+                }
+
+                .addDate{
+
+                    display: inline-flex;
+                    input{
+                        width: 90px;
                     }
                 }
     
