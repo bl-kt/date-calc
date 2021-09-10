@@ -33,8 +33,8 @@ const diffEnd = document.querySelector("#diffEnd").addEventListener("change", fu
 const diffSlide = document.querySelector(".differenceBetween");
 const addSlide = document.querySelector(".addSubtract");
 
-const diffToggle = document.querySelector(".diff");
-const addToggle = document.querySelector(".add");
+const diffToggle = document.querySelector("#diff").addEventListener("click", function() {displayDiff()});
+const addToggle = document.querySelector("#add").addEventListener("click", function() {displayAdd()});
 
 function displayDiff(){
     diffSlide.classList.add("display");
@@ -51,23 +51,4 @@ function displayAdd(){
 
     addSlide.classList.add("display");
     addToggle.style.backgroundColor = "#0000002f";
-}
-
-//dark mode
-
-const body = document.querySelector("body");
-const mode = document.querySelector("#mode");
-const moon = document.querySelector("#moon" );
-const sun = document.querySelector("#sun");
-
-function lightMode(){
-    body.classList.toggle('light');
-    if (body.classList.contains('light')){
-        moon.style.display = "inline-block";
-        sun.style.display = "none";
-    }
-    else {
-        sun.style.display = "inline-block";
-        moon.style.display = "none";
-    }
 }
