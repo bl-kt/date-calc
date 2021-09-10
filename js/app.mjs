@@ -1,12 +1,17 @@
-
 //date-calc
-const addStart = document.querySelector(".addStart");
-const addAmount = document.querySelector(".addAmount");
+
+import {calcDiff, subDays, addDays} from './date-calc.mjs';
+
+
+let addStart = document.querySelector(".addStart");
+let addAmount = document.querySelector(".addAmount");
+const addResult = document.querySelector("#addResult");
 
 let startTime;
 let endTime;
-
 const diffResult = document.querySelector("#diffResult");
+
+document.querySelector('#diffSubmit').addEventListener("click", function() {calcDiff(startTime, endTime)});
 
 const diffStart = document.querySelector("#diffStart").addEventListener("change", function(){   
     const value = this.value;
@@ -23,37 +28,6 @@ const diffEnd = document.querySelector("#diffEnd").addEventListener("change", fu
     endTime = time;
     console.log(endTime);
 });
-
-function calcDiff(startTime, endTime){
-    let diffTime = endTime - startTime;
-    //days from calculated value
-    let diffDays = diffTime / (1000 * 3600 * 24);
-    let diffWeeks = diffTime / (1000 * 3600 * 168);
-    let diffMonths = diffTime/ (1000 * 3600 * 168 * 4.5);
-    let diffYears = diffTime / (1000 * 3600 * 168 * 54);
-
-    console.log(`The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`);
-    console.log(`The rounded difference is ${Math.round(diffDays)} day(s), or ${Math.round(diffWeeks)} week(s), or ${Math.round(diffMonths)} month(s), or ${Math.round(diffYears)} year(s).`);
-    
-    diffResult.innerHTML = `The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`;
-    return diffDays;
-}
-
-function addDays(startDate, amount) {
-    startDate = new Date(startDate);
-    result = startDate.getDate() + amount;
-    return result;
-}
-
-function subDays(startDate, amount) {
-    startDate = new Date(startDate);
-    result = startDate.getDate() - amount;
-    return result;
-}
-
-function differenceBetween(diffStart, diffEnd){
-    calcDiff(diffStart, diffEnd);
-}
 
 //slideshow
 const diffSlide = document.querySelector(".differenceBetween");

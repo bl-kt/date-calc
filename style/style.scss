@@ -160,14 +160,14 @@
         stroke: $text;
     }
 
-    #logo {
+    .brand {
         stroke: $text;
         margin: 0 auto;
         fill: #ffffff00 !important;
         stroke-width: 5px;
     }
 
-    #logo:hover{
+    .brand:hover{
         stroke: $highlight;
     }
 
@@ -479,7 +479,7 @@ body{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             font-family: Roboto, sans-serif;
-    
+            padding-top: 1vh;
             text-align: center;
         
             #diffStart, #diffEnd, #addStart, #addAmount{

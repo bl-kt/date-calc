@@ -170,14 +170,14 @@ body svg {
   stroke: #fff;
 }
 
-body #logo {
+body .brand {
   stroke: #fff;
   margin: 0 auto;
   fill: #ffffff00 !important;
   stroke-width: 5px;
 }
 
-body #logo:hover {
+body .brand:hover {
   stroke: orange;
 }
 
@@ -604,14 +604,14 @@ body .footer-background .contact-wrapper #map {
   stroke: #494949;
 }
 
-.light #logo {
+.light .brand {
   stroke: #494949;
   margin: 0 auto;
   fill: #ffffff00 !important;
   stroke-width: 5px;
 }
 
-.light #logo:hover {
+.light .brand:hover {
   stroke: #fd5e53;
 }
 
@@ -1045,14 +1045,14 @@ body .footer-background .contact-wrapper #map {
   stroke: #fff;
 }
 
-.date-calc #logo {
+.date-calc .brand {
   stroke: #fff;
   margin: 0 auto;
   fill: #ffffff00 !important;
   stroke-width: 5px;
 }
 
-.date-calc #logo:hover {
+.date-calc .brand:hover {
   stroke: orange;
 }
 
@@ -1349,6 +1349,7 @@ body .footer-background .contact-wrapper #map {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   font-family: Roboto, sans-serif;
+  padding-top: 1vh;
   text-align: center;
 }
 

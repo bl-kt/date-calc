@@ -1,10 +1,3 @@
-function calcDiff(startDate, endDate, wd, we){
-    startDate = new Date(startDate);
-    endDate = new Date (endDate);
-    result = endDate.getDate() - startDate.getDate();
-    return result;
-}
-
 function addDays(startDate, amount) {
     startDate = new Date(startDate);
     result = startDate.getDate() + amount;
@@ -16,3 +9,20 @@ function subDays(startDate, amount) {
     result = startDate.getDate() - amount;
     return result;
 }
+
+function calcDiff(startTime, endTime){
+    let diffTime = endTime - startTime;
+
+    let diffDays = diffTime / (1000 * 3600 * 24);
+    let diffWeeks = diffTime / (1000 * 3600 * 168);
+    let diffMonths = diffTime/ (1000 * 3600 * 168 * 4.5);
+    let diffYears = diffTime / (1000 * 3600 * 168 * 54);
+
+    console.log(`The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`);
+    console.log(`The rounded difference is ${Math.round(diffDays)} day(s), or ${Math.round(diffWeeks)} week(s), or ${Math.round(diffMonths)} month(s), or ${Math.round(diffYears)} year(s).`);
+    
+    diffResult.innerHTML = `The difference is ${diffDays} day(s), or ${diffWeeks} week(s), or ${diffMonths} month(s), or ${diffYears} year(s).`;
+    return diffDays;
+}
+
+export { calcDiff, subDays, addDays};
