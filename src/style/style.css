@@ -147,6 +147,24 @@ body footer a {
   border-bottom-width: 2px;
   padding-left: 15px;
   font-size: 16px;
+  display: block;
+}
+
+.date-calc .content form .dateInput .startDate #addAmount, .date-calc .content form .dateInput .startDate #addSubtract, .date-calc .content form .dateInput .startDate #addType, .date-calc .content form .dateInput .endDate #addAmount, .date-calc .content form .dateInput .endDate #addSubtract, .date-calc .content form .dateInput .endDate #addType, .date-calc .content form .dateInput .addDate #addAmount, .date-calc .content form .dateInput .addDate #addSubtract, .date-calc .content form .dateInput .addDate #addType {
+  width: 70px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  padding-left: 15px;
+}
+
+.date-calc .content form .dateInput .startDate #addAmount, .date-calc .content form .dateInput .endDate #addAmount, .date-calc .content form .dateInput .addDate #addAmount {
+  width: 40px;
 }
 
 .date-calc .content form .dateInput .startDate input:focus, .date-calc .content form .dateInput .endDate input:focus, .date-calc .content form .dateInput .addDate input:focus {
@@ -164,13 +182,7 @@ body footer a {
 .date-calc .content form .dateInput .startDate label, .date-calc .content form .dateInput .endDate label, .date-calc .content form .dateInput .addDate label {
   font-weight: 600;
   margin-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: columm;
-          flex-direction: columm;
+  display: block;
 }
 
 .date-calc .content form .dateInput .startDate #diffStart, .date-calc .content form .dateInput .startDate #diffEnd, .date-calc .content form .dateInput .endDate #diffStart, .date-calc .content form .dateInput .endDate #diffEnd, .date-calc .content form .dateInput .addDate #diffStart, .date-calc .content form .dateInput .addDate #diffEnd {
