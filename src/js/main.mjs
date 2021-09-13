@@ -1,5 +1,16 @@
-//date-calc
+//slideshow
+import {displayDiff, displayAdd} from './slideshow-datecalc.mjs'
 
+const diffToggle = document.querySelector("#diff")
+diffToggle.addEventListener("click", function() {displayDiff(diffSlide, addSlide, diffToggle, addToggle)});
+
+const addToggle = document.querySelector("#add")
+addToggle.addEventListener("click", function() {displayAdd(diffSlide, addSlide, addToggle, diffToggle)});
+
+const diffSlide = document.querySelector(".differenceBetween");
+const addSlide = document.querySelector(".addSubtract");
+
+//date-calc
 import {calcDiff, subDays, addDays} from './date-calc.mjs';
 
 const diffEndDay = document.querySelector("#diffEndDay");
@@ -12,6 +23,7 @@ const addResult = document.querySelector("#addResult");
 
 let startTime;
 let endTime;
+
 const diffResult = document.querySelector("#diffResult");
 
 const diffStart = document.querySelector("#diffStart").addEventListener("change", function(){   
@@ -32,26 +44,3 @@ const diffEnd = document.querySelector("#diffEnd").addEventListener("change", fu
 
 document.querySelector('#diffSubmit').addEventListener("click", function() {calcDiff(startTime, endTime, diffEndDay)});
 
-
-
-//slideshow
-const diffToggle = document.querySelector("#diff").addEventListener("click", function() {displayDiff()});
-const addToggle = document.querySelector("#add").addEventListener("click", function() {displayAdd()});
-
-const diffSlide = document.querySelector(".differenceBetween");
-const addSlide = document.querySelector(".addSubtract");
-
-function displayDiff(){
-    diffSlide.classList.add("display");
-    addSlide.classList.remove("display");
-
-    diffToggle.style.background = "linear-gradient(to bottom, #ccc, #fff)";
-
-}
-
-function displayAdd(){
-    diffSlide.classList.remove("display");
-
-    addSlide.classList.add("display");
-    addToggle.style.background = "linear-gradient(to bottom, #ccc, #fff)";
-}

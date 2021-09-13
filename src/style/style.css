@@ -81,20 +81,14 @@ body footer a {
           justify-content: space-evenly;
   margin: 0 5px;
   background-color: #fff;
-  color: linear-gradient(135deg, #010101, #007BB8);
   border-radius: 4px;
   padding: 8px;
   letter-spacing: .5px;
+  -webkit-transition: 0.3s linear ease;
+  transition: 0.3s linear ease;
 }
 
-.date-calc .form-nav a:hover {
-  color: #00689c;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));
-  background: linear-gradient(to bottom, #ccc, #fff);
-}
-
-.date-calc .form-nav a:clicked {
-  color: #00689c;
+.date-calc .form-nav #diff {
   background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));
   background: linear-gradient(to bottom, #ccc, #fff);
 }
