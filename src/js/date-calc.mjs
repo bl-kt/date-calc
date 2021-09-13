@@ -12,8 +12,8 @@ function subDays(startDate, amount) {
 
 function calcDiff(startTime, endTime, diffEndDay){
 
-    if (!diffEndDay.checked){
-        endTime -= 86400000;
+    if (diffEndDay.checked){
+        endTime += 86400000;
         console.log(endTime);
     }
 
