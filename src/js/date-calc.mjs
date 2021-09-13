@@ -10,7 +10,13 @@ function subDays(startDate, amount) {
     return result;
 }
 
-function calcDiff(startTime, endTime){
+function calcDiff(startTime, endTime, diffEndDay){
+
+    if (!diffEndDay.checked){
+        endTime -= 86400000;
+        console.log(endTime);
+    }
+
     let diffTime = endTime - startTime;
 
     let diffDays = diffTime / (1000 * 3600 * 24);

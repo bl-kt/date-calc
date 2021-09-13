@@ -2,6 +2,9 @@
 
 import {calcDiff, subDays, addDays} from './date-calc.mjs';
 
+const diffEndDay = document.querySelector("#diffEndDay");
+
+let endDayToggle = diffEndDay.checked;
 
 let addStart = document.querySelector(".addStart");
 let addAmount = document.querySelector(".addAmount");
@@ -10,8 +13,6 @@ const addResult = document.querySelector("#addResult");
 let startTime;
 let endTime;
 const diffResult = document.querySelector("#diffResult");
-
-document.querySelector('#diffSubmit').addEventListener("click", function() {calcDiff(startTime, endTime)});
 
 const diffStart = document.querySelector("#diffStart").addEventListener("change", function(){   
     const value = this.value;
@@ -28,6 +29,10 @@ const diffEnd = document.querySelector("#diffEnd").addEventListener("change", fu
     endTime = time;
     console.log(endTime);
 });
+
+document.querySelector('#diffSubmit').addEventListener("click", function() {calcDiff(startTime, endTime, diffEndDay)});
+
+
 
 //slideshow
 const diffToggle = document.querySelector("#diff").addEventListener("click", function() {displayDiff()});
