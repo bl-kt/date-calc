@@ -1,12 +1,47 @@
-function addDays(startDate, amount) {
-    startDate = new Date(startDate);
-    result = startDate.getDate() + amount;
-    return result;
-}
+function addDays(startDate, addAmount, addEndDay, addSubtract, addType) {
 
-function subDays(startDate, amount) {
-    startDate = new Date(startDate);
-    result = startDate.getDate() - amount;
+    let result;
+    let swiVar = addType.selectedIndex;
+
+    if (addEndDay.checked){
+        result += 86400000;
+        console.log(result);
+    }
+
+    switch(swiVar){
+            
+        case 1:
+            addAmount *= 86400000;
+            break;
+
+        case 2:
+            addAmount *= 604800000;
+            break;
+
+        case 3:
+            addAmount *=2721600000;
+            break;
+
+        case 4:
+            addAmount *=32659200000;
+            break;
+
+        case 0:
+            alert("Please select a different option.") 
+            break;  
+    }
+
+    if (addSubtract.selectedIndex = 1){
+        result = startDate + addAmount;
+    }
+    else if ( addSubtract.selectedIndex = 2){
+        result = startDate - addAmount;
+    }
+    else{
+        alert("Please select a modifer.");
+    }
+    
+    console.log(result);
     return result;
 }
 
@@ -31,4 +66,4 @@ function calcDiff(startTime, endTime, diffEndDay){
     return diffDays;
 }
 
-export { calcDiff, subDays, addDays};
+export { calcDiff, addDays};
