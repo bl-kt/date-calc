@@ -1,10 +1,12 @@
 //slideshow
 import {displayDiff, displayAdd} from './slideshow-datecalc.mjs'
 
-const diffToggle = document.querySelector("#diff")
+const diffToggle = document.querySelector("#diff");
+
 diffToggle.addEventListener("click", function() {displayDiff(diffSlide, addSlide, diffToggle, addToggle)});
 
-const addToggle = document.querySelector("#add")
+const addToggle = document.querySelector("#add");
+
 addToggle.addEventListener("click", function() {displayAdd(diffSlide, addSlide, addToggle, diffToggle)});
 
 const diffSlide = document.querySelector(".differenceBetween");
@@ -23,8 +25,7 @@ import {calcDiff, addDays} from './date-calc.mjs';
 
 const addEndDay = document.querySelector("#addEndDay");
 
-const addStart = document.querySelector("#addStart")
-
+const addStart = document.querySelector("#addStart");
 addStart.addEventListener("change", function(){
     value = this.value;
     date = new Date(value);
@@ -33,28 +34,28 @@ addStart.addEventListener("change", function(){
     console.log(startTime);
 });
 
-let addAmount = document.querySelector("#addAmount")
-
+let addAmount = document.querySelector("#addAmount");
 addAmount.addEventListener("change", function(){
     addAmount = this.value;
     console.log(addAmount);
 });
 
-const addType = document.querySelector("#addType")
-
+const addType = document.querySelector("#addType");
 addType.addEventListener("change", function(){
     modType = addType.selectedIndex;
     console.log(modType);
     return modType;
 });
 
-const addSubtract = document.querySelector("#addSubtract")
-
+const addSubtract = document.querySelector("#addSubtract");
 addSubtract.addEventListener("change", function(){
     addSub = addSubtract.selectedIndex;
     console.log(addSub);
     return addSub;
 });
+
+const addResult = document.querySelector("#addResult");
+
 
 document.querySelector('#addSubmit').addEventListener("click", function(){addDays(startTime, addAmount, addEndDay, addSubtract, addType)})
 
@@ -62,7 +63,7 @@ const diffEndDay = document.querySelector("#diffEndDay");
 
 const diffResult = document.querySelector("#diffResult");
 
-const diffStart = document.querySelector("#diffStart")
+const diffStart = document.querySelector("#diffStart");
 
 diffStart.addEventListener("change", function(){   
     value = this.value;
@@ -72,7 +73,7 @@ diffStart.addEventListener("change", function(){
     console.log(startTime);
 });
  
-const diffEnd = document.querySelector("#diffEnd")
+const diffEnd = document.querySelector("#diffEnd");
 
 diffEnd.addEventListener("change", function(){   
     value = this.value;

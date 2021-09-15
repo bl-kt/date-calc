@@ -41,7 +41,11 @@ function addDays(startDate, addAmount, addEndDay, addSubtract, addType) {
         alert("Please select a modifer.");
     }
     
-    console.log(result);
+
+    result = new Date(result);
+
+    addResult.innerHTML = result;
+    
     return result;
 }
 
